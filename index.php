@@ -38,7 +38,7 @@
 		$query = http_build_query($_POST);
 	}*/
 	
-	echo "<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'/>";
+	echo "<link href='js/jquery-ui.css' rel='stylesheet' type='text/css'/>";
 	echo "<link href='css/normalize.css' rel='stylesheet'/>";
 	echo "<link href='css/stylesheet.css' rel='stylesheet'/>";
 	echo "<link href='css/mini.css' rel='stylesheet' type='text/css'/>"; // MAKE CHANGES TO CSS IN THIS FILE. KTHXBAI.
