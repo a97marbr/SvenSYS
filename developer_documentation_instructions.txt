@@ -1,0 +1,19 @@
+Developer Instructions / Documentation
+
+Development on the user interface is done for each tab separately.
+
+Each tab has a file and a corresponding file that is included into the main project.
+
+In the main project file i.e. index.php each file is included using a single line 
+	include("tab_manageconference.php");
+and a corresponding tab is created using
+	generatetabform("index.php","ManageConferences");
+
+Each tab form has the same basic structure
+
+A section for saving the changed data depending on the button presses in the user interface
+A section for selection filters (if there are any)
+
+
+
+

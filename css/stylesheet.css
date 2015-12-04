@@ -1,0 +1,1226 @@
+@charset "utf-8";
+/* MAKE CHANGES TO CSS IN mini.css INSTEAD. KTHXBAI! */
+/*
+	COLOR STYLES:
+
+	WRAPPER & CONTENT & HEADER BORDER COLOR: #471458
+	(only header and content uses borders in 100% mode. wrappers left and right borders are used for themes lower then 100%).
+	
+	CONTENT COLOR: #F3D0EE;
+	
+	TABLE HOVER COLOR: #D95CE2
+	old: #A7B57E
+	
+	MENU & SUB EDIT BOX COLOR: #691E82
+	
+	EDIT BOX: #D398E7
+	
+	SELECTED ROW BACKGROUND: #FFC848
+	SELECTED ROW BORDER: #FF1
+	
+	EDIT & SUB EDIT BOX BORDER COLOR: #471458
+	
+	
+*/
+
+@font-face {
+	font-family: 'DroidSansRegular';
+	src: url('fonts/DroidSans-webfont.eot');
+	src: local('☺'), url('fonts/DroidSans-webfont.woff') format('woff'), url('fonts/DroidSans-webfont.ttf') format('truetype'), url('fonts/DroidSans-webfont.svg#webfontw7zqO19G') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DroidSansBold';
+	src: url('fonts/DroidSans-Bold-webfont.eot');
+	src: local('☺'), url('fonts/DroidSans-Bold-webfont.woff') format('woff'), url('fonts/DroidSans-Bold-webfont.ttf') format('truetype'), url('fonts/DroidSans-Bold-webfont.svg#webfontSOhoM6aS') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('fonts/League_Gothic-webfont.eot');
+	src: local('☺'), url('fonts/League_Gothic-webfont.woff') format('woff'), url('fonts/League_Gothic-webfont.ttf') format('truetype'), url('fonts/League_Gothic-webfont.svg#webfontFHzvtkso') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MarketingScriptRegular';
+	src: url('fonts/MarketingScript-webfont.eot');
+	src: local('☺'), url('fonts/MarketingScript-webfont.woff') format('woff'), url('fonts/MarketingScript-webfont.ttf') format('truetype'), url('fonts/MarketingScript-webfont.svg#webfontZ5AiaAsu') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+body {
+    background-color: #FFFFFF;
+    background-repeat: repeat-x;
+    text-align: center;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type="submit"], button {
+    display: inline;
+    padding: 6px 10px;
+    -webkit-border-radius: 2px 2px;
+    -moz-border-radius: 2px 2px;
+    border-radius: 2px 2px;
+    border: solid 1px rgb(153, 153, 153);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), to(rgb(221, 221, 221)));
+    background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(221, 221, 221));
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(255,255,255,1);
+    line-height: 1;
+    font-size: 1.3em;
+    min-width: 90px;
+    margin: 0 15px 0 0;
+}
+button[disabled="disabled"], input[type="submit"][disabled="disabled"], input[type="button"][disabled="disabled"] {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+#enabledButton {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0096ff), to(#0081DB));
+    text-shadow: 0px 1px 1px rgba(255,255,255,1);
+    text-shadow: none;
+    color: #fff;
+    border: 1px solid #000;
+    background: -moz-linear-gradient(top, #0096ff, #0081DB);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0096ff, endColorstr=#0081DB);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#0096ff, endColorstr=#0081DB)";
+}
+.textarea {
+    height: 77px;
+    padding: 1px 2px;
+    display: block;
+    width: 96%;
+    float: left;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border: 1px solid #471458;
+    border-radius: 3px;
+    resize: none;
+}
+/* *** LOGO *** */
+header {
+    width: 100%;
+    position: relative;
+    border-top: solid 1px #000000;
+    background-color: RGB(250,199,194);
+	z-index: 0;
+}
+.logoLink {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 26%;
+	min-width: 110px;
+	height: 100%;
+	float: left;
+
+}
+.logoLink div {
+	width: 100%;
+	height: 100%;
+}
+/* *** LOG IN *** */
+#loginform {
+    width: 315px;
+    margin: 30px auto;
+    text-align: center;
+}
+#loginform form {
+	font-family: "DroidBoldSans", Verdana,sans-serif;
+    text-align: left;
+    padding: 10px;
+    margin: 20px 0;
+    border: 5px solid #E9E9E4;
+    background-color: #FAFAF6;
+}
+#loginform h1 {
+    /*display: block;
+    width: 100%;
+    float: left;
+    font-size: 1.6em;*/
+	font: normal 24px "MarketingScriptRegular", Georgia, serif;
+	color: #717165;
+	margin-left: 10px;
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #ecece9;
+	width: 270px;
+	text-align: left;
+}
+#loginform fieldset {
+	border: none;
+}
+#loginform fieldset input[type="text"], #loginform fieldset input[type="password"] {
+	width: 250px; 
+	padding: 8px 8px; 
+	font-size: 12px;
+	color: #89897e; 
+	border: 1px solid #e5e5dd; 
+	background: #f4f4ed; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+	height: auto;
+}
+#loginform input[type="submit"]{
+	float: right;
+	margin-right: 10px;
+	padding: 8px 15px;
+	font: bold 12px "DroidSansBold", Verdana, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+	color: #fff;
+	text-shadow: 1px 1px 1px #89897e;
+	border: none;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFA6C9), to(#FC89AC)); 
+	background-image: -moz-linear-gradient(19% 75% 90deg,#FC89AC, #FFA6C9);
+	background-color: #FFA6C9;
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-o-border-radius: 8px; 
+	border-radius: 8px;
+	cursor: pointer;
+}
+#loginform label, .noInfo {
+	display: block; 
+	font: 14px "DroidSansBold", Verdana, sans-serif; 
+	line-height: 1.5em; 
+	color: rgb(255, 105, 180);
+}
+
+.noInfo, #personEmploymentInfo {
+	float: left;
+	clear: both;
+}
+.noInfo h2 {
+	font: 16px "DroidSansBold", Verdana, sans-serif !important;
+	color: #717165;
+}
+.controlPanel h3 {
+	font: 14px "DroidSansBold", Verdana, sans-serif !important;
+	color: rgb(255, 105, 180);
+}
+.controlPanel th {
+	font: 12px "DroidSansBold", Verdana, sans-serif !important;
+	color: #696969;
+}
+.controlPanel td {
+	font: 12px "DroidSansRegular", Verdana, sans-serif !important;
+}
+
+/* *** MENYN *** */
+nav {
+    width: 100%;
+    background-color: rgb(252, 137, 172);
+}
+nav ul {
+    margin-top: 0;
+}
+nav ul li {
+    list-style: none;
+    float: left;
+	padding-left: 20px;
+}
+nav ul:last-child {
+	padding-left: 0;
+}
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding: 7px 10px;
+    font-size: 1.4em;
+	font-family: "DroidSansRegular", Verdana,sans-serif;
+	text-transform: uppercase;
+	line-height: 1.2;
+    float: left;
+    color: #EAEAEA;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+nav ul li#active a {
+    background: rgb(255, 50, 180);
+}
+nav ul li a:hover {
+    background: rgb(255, 20, 147);
+    /*cursor: pointer;*/
+    /*color: #FFF;*/
+}
+/* *** MAIN CONTENT *** */
+#content {
+    background: url(../images/box_bg.png) #FFFFFF;
+    background-repeat: repeat-x;
+    text-align: left;
+    width: 96%;
+    _width: 96%;
+    padding: 0 2% 20px;
+    float: left;
+}
+#content h2 {
+    width: 100%;
+    display: block;
+    font-size: 2.6em;
+    font-weight: 300;
+    margin: 15px 0 10px;
+}
+/* *** TABLES *** */
+table {
+    font-size: 1.1em;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+#contentTable {
+
+}
+#contentTable tr#selectedRow {
+    background: #FFC848
+}
+#contentTable tr#selectedRow td {
+    border-top: 2px dashed #FF1;
+    border-bottom: 2px dashed #FF1;
+}
+#contentTable tr.even {
+    background: #D9D9D4;
+}
+#contentTable tr#top img {
+    float: left
+}
+#contentTable tr#top td#selected {
+    background: hotpink;
+    color: #000;
+}
+#contentTable tr td {
+    padding: 5px 10px
+}
+/* *** TABLE STYLE FOR ALL BROWSER BUT IE *** */
+#contentTable tr#top {
+    display: table-row;
+    background: #000;
+    font-weight: 700;
+    color: #EBEBEB;
+}
+#contentTable tr#top a {
+    /* ??? DRY */
+    color: #EBEBEB;
+    text-decoration: none;
+}
+#contentTable #scrollTable {
+    height: 100px;
+    overflow: scroll;
+}
+#contentTable tr#top td:hover {
+    background: #D95CE2;
+    color: #000;
+    cursor: pointer;
+}
+#contentTable tr#top td#selected:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#contentTable tr:hover {
+    background: #D95CE2;
+    color: #000;
+    cursor: pointer;
+}
+#contentTable tr.even:hover {
+    background: #D95CE2;
+    color: #000;
+    cursor: pointer;
+}
+/* *** TABLE IE FIX *** */
+#contentTable a:hover tr {
+    _background: #D95CE2;
+    _cursor: pointer;
+}
+#contentTable a:hover tr.even {
+    _background: #D95CE2;
+    _cursor: pointer;
+}
+#contentTable tr#top a:hover td {
+    _background: #D95CE2;
+    _color: #000000;
+    _cursor: pointer;
+}
+#contentTable tr#top a:hover td#selected {
+    _text-decoration: underline;
+    _cursor: pointer;
+}
+/* *** DIV HOLDING MANAGE TALBES, ETC *** */
+#manageBox {
+	background-color: #FAFAF6;
+	border: 5px solid #E9E9E4;
+	float: left;
+	font-family: "DroidSansRegular", Verdana,sans-serif;
+	margin: 20px 0 20px 15px;
+	padding: 10px 25px;
+	text-align: left;
+}
+#manageBox h1 {
+	font: normal 24px "DroidSansRegular", Verdana, sans-serif;
+	color: #717165;
+	margin-left: 10px;
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #ecece9;
+	text-align: left;
+}
+#manageBox table {
+	float: none;
+	width: auto;
+}
+#manageBoxWrapper {
+	position: absolute;
+	margin-left: 320px;
+}
+/* *** EDITOR TAB *** */
+#editBox {
+	width: 280px;
+	background-color: #FAFAF6;
+	border: 5px solid #E9E9E4;
+	float: left;
+	font-family: "DroidSansBold", Verdana,sans-serif;
+	margin: 20px 0;
+	padding: 10px;
+	text-align: left;
+}
+#editBox h1 {
+	font: normal 24px "MarketingScriptRegular", Georgia, serif;
+	color: #717165;
+	margin-left: 10px;
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #ecece9;
+	text-align: left;
+}
+#editBox h2, #editBox h3 {
+	text-align: left;
+	font: normal 20px "DroidSansRegular", Verdana, sans-serif;
+	color:#e29794;
+}
+#editBox h3 {
+	font-size: 14px;
+}
+#editBox fieldset {
+	border: none;
+	border-bottom: 1px solid #ECECE9;
+}
+#editBox legend {
+	margin-top: 5px;
+	font-size: 14px;
+	color: #FF69B4;
+}
+#editBox .searchButton {
+	margin-top: 10px;
+}
+#content #editBox input[type="button"], #content #editBox input[type="submit"] {
+	margin-left: 0;
+}
+#content #editBox #editBoxYearButton {
+	margin-left: 5px;
+}
+#editBox select, #editBox option {
+	font: normal 12px "DroidSansRegular", Verdana,sans-serif;
+	color: #000000;
+	border: 1px solid hotpink;
+	height: auto;
+	color: #717165;
+	background-color: #FFDDF4;
+}
+#editBox #courseDropDown select {
+	width: 264px;
+}
+#editBox>form:last-child>fieldset>input[type="submit"] {
+	margin-top: 5px;	
+}
+.textfield {
+	float: left;
+	width: 248px; 
+	padding: 8px 8px; 
+	font-size: 12px;
+	color: #89897e; 
+	border: 1px solid #e5e5dd; 
+	background: #f4f4ed; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+}
+
+/* *** SUB EDIT TAB *** */
+#subEditBox {
+    float: left;
+    width: 78%;
+    padding: 5px 1%;
+    background: #757575;
+    margin: 0 10%;
+    text-align: right;
+    border-bottom: 1px solid #B7B7B7;
+    border-left: 1px solid #B7B7B7;
+    border-right: 1px solid #B7B7B7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/* *** CODE *** */
+pre {
+    font-size: 1.5em;
+    padding: 5px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+/* *** VIEW REGISTRATIONS *** */
+#printBox {
+    width: 100%;
+    border: 1px solid #595959;
+    font-size: 1.2em;
+}
+.h35 {
+    height: 30px;
+    cursor: default;
+    font-size: 1.05em;
+}
+.unpaid {
+    background-color: #fff;
+    color: #000;
+}
+.paidCard {
+    background-color: #00B000;
+    color: #000;
+}
+.paidInvoice {
+    background-color: #5CC46C;
+    color: #000;
+}
+.reminderSent {
+    background-color: #C24E4E;
+    color: #fff;
+}
+.suspicious {
+    background-color: #3F708F;
+    color: #fff;
+}
+.note {
+    background-image: url('./images/note.gif');
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    background-color: #FFE;
+    padding: 5px 10px 5px 25px;
+    margin-bottom: 10px;
+    border: 1px solid #696969;
+    color: #333;
+    font-size: 1.2em;
+    display: inline-block;
+}
+/* *** FOOTER *** */
+footer {
+    width: 96%;
+    margin: 10px 0 30px;
+    padding: 0 2%;
+    text-align: right;
+    color: #282828;
+    text-shadow: 0 1px #999;
+}
+.removeConfirm {
+    margin-left: 10px
+}
+#removeConfirmButtonholder {
+    margin-left: 48px;
+    margin-top: 20px;
+    text-align: center;
+}
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header {
+    margin-bottom: 8px
+}
+.ui-timepicker-div dl {
+    text-align: left
+}
+.ui-timepicker-div dl dt {
+    height: 25px
+}
+.ui-timepicker-div dl dd {
+    margin: -25px 0 10px 65px
+}
+.ui-timepicker-div td {
+    font-size: 120%
+}
+.ui-widget {
+    font-size: 170%
+}
+/* coursebudgetview */
+#coursebudgetview {
+    font-family: 'Arial';
+    font-size: 14px;
+    width: auto;
+    white-space: nowrap;
+    clear: both;
+}
+.courseHeader {
+    font-weight: bold;
+    text-align: left;
+}
+.courseName, .courseLevel, .courseTempo, .courseCredits {
+    background-color: #FAFAF6;
+}
+.courseName {
+    max-width: 300px;
+    overflow: hidden;
+}
+.courseCode {
+    background-color: #b7cbe3
+}
+.emptyWhite {
+    min-width: 10px;
+    background-color: white;
+}
+.emptyGrey {
+    min-width: 10px;
+    background-color: gray;
+}
+.coursePeriod {
+    min-width: 35px;
+    background-color: #bebebe;
+	cursor: pointer;
+}
+.courseCredits {
+    background-color: lightpink
+}
+.courseBstud {
+    background-color: #fefe99
+}
+.courseBudget {
+    background-color: #c4d8f0
+}
+.courseAdmin {
+	background-color: lightpink;
+}
+.pepHeader{
+	font-weight: bold;
+    text-align: center;
+}
+#sumHeader{
+	background-color: #ff9922;
+}
+#avHeader{
+	background-color: #44ff44;
+}
+#AKMATHeader{
+	background-color: #B8DAFD;
+}
+.sumCell {
+	background-color: #ffbb44;
+}
+.AKMATCell{
+	text-align: right;
+	background-color: #B8DAFD;
+}
+.courseAndHoursRow:nth-child(odd) .hoursCell, .courseAndHoursRow:nth-child(odd) .courseName, .courseAndHoursRow:nth-child(odd) .courseAndHoursSeparator {
+    background-color: #D9D9D4;
+}
+.courseBigCell {
+	background-color: #FAFAF6;
+}
+.currentYear {
+	float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.coursePersonSign, .coursePersonName {
+    /*overflow: hidden;*/
+    max-width: 20px;
+}
+.coursePersonName{
+	position: relative;
+}
+.coursePersonName span {
+
+    transform: rotate(270deg);
+    -moz-transform: rotate(270deg); /* FF3.5+ */
+    -o-transform: rotate(270deg); /* Opera 10.5 */
+    -webkit-transform: rotate(270deg); /* Saf3.1+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; /* IE8 */
+}
+.coursePersonSign {
+	text-align: center;
+}
+
+.searchCoursesContainer {
+	float: left;
+}
+.searchCoursesButtons {
+	margin-top: 16px;
+}
+
+.searchBoxCourses, .searchBoxPersons fieldset, #extraTime, #personEmploymentInfo fieldset, .noInfo fieldset {
+	border: none;
+	float: left;
+	width: 320px;
+	clear: both;
+}
+#extraTime, #personEmploymentInfo fieldset, #searchPersonField {
+	border-bottom: 1px solid #ECECE9;
+}
+
+.searchBoxCourses legend, #searchPersonField legend, #yearBoxPersons legend, #extraTime legend, #personEmploymentInfo legend {
+	font: bold 14px "DroidSansBold", Verdana, sans-serif; 
+	line-height: 1.5em; 
+	color: rgb(255, 105, 180);
+}
+#personEmploymentInfo fieldset {
+	margin-top: 5px;
+}
+.searchBoxCourses input[type="submit"], .searchBoxPersons input[type="submit"],
+.searchBoxPersons button, #extraTime input[type="button"],
+#personEmploymentInfo input[type="submit"], .noInfo input[type="submit"],
+#backToPersons, #editBox input[type="submit"], #editBox input[type="button"],
+#importButton {
+	float: left;
+	margin-right: 5px;
+	padding: 8px 15px;
+	font: bold 12px "DroidSansBold", Verdana, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+	color: #fff;
+	text-shadow: 1px 1px 1px #89897e;
+	border: none;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFA6C9), to(#FC89AC)); 
+	background-image: -moz-linear-gradient(19% 75% 90deg,#FC89AC, #FFA6C9);
+	background-color: #FFA6C9;
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-o-border-radius: 8px; 
+	border-radius: 8px;
+	cursor: pointer;
+	margin-left: 5px;
+}
+#backToPersons {
+	float: none;
+	margin-top: 10px;
+}
+
+.searchBoxCourses input[type="text"], .searchBoxPersons input[type="text"], .noInfo input[type="text"] {
+	float: left;
+	width: 195px; 
+	padding: 8px 8px; 
+	font-size: 12px;
+	color: #89897e; 
+	border: 1px solid #e5e5dd; 
+	background: #f4f4ed; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+}
+
+#yearBoxCourses span, #yearBoxPersons #curYear, #editBox span, #editBox #curYear {
+	font: normal 24px "MarketingScriptRegular", Georgia, serif;
+	color: #717165;
+	margin: 0 2px;
+}
+#curYear {
+	float: left;
+	margin-left: 2px;
+}
+
+#yearBoxCourses select, #yearBoxCourses option {
+	font: normal 21px "DroidSansRegular", Verdana,sans-serif;
+	color: #717165;
+	border: 1px solid hotpink;
+	background-color: #FFDDF4;
+	height: auto;
+}
+.courseTableModifyingButtons, .courseTableModifyingCheckboxes {
+	float: left;
+	margin-top: 8px;
+}
+.courseTableModifyingCheckboxes {
+	margin-left: 5px;
+}
+
+.controlPanel {
+	font-family: "DroidSansBold", Verdana,sans-serif;
+    text-align: left;
+    padding: 10px;
+    margin: 20px 0;
+    border: 5px solid #E9E9E4;
+    background-color: #FAFAF6;
+	float: left;
+}
+.controlPanel h1 {
+	font: normal 24px "MarketingScriptRegular", Georgia, serif;
+	color: #717165;
+	margin-left: 10px;
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #ecece9;
+	text-align: left;
+}
+
+.courseTableModifyingCheckboxes label {
+	float: left;
+	clear: both;
+	font: normal 14px "DroidSansRegular", Verdana,sans-serif;
+	color: #717165;
+	margin-bottom: 2px;
+	margin-top: 5px;
+	border-bottom: 1px solid #ecece9;
+}
+.courseTableModifyingCheckboxes input[type="checkbox"] {
+	display: inline-block;
+	margin-right: 2px;
+}
+
+
+.courseTableModifyingButtons input[type="button"] {
+	width: 135px;
+	margin-bottom: 5px;
+	float: left;
+	clear: both;
+	margin-right: 5px;
+	padding: 5px 10px;
+	font: bold 10px "DroidSansBold", Verdana, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+	color: #fff;
+	text-shadow: 1px 1px 1px #89897e;
+	border: none;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFA6C9), to(#FC89AC)); 
+	background-image: -moz-linear-gradient(19% 75% 90deg,#FC89AC, #FFA6C9);
+	background-color: #FFA6C9;
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	-o-border-radius: 8px; 
+	border-radius: 8px;
+	cursor: pointer;
+	margin-left: 5px;
+}
+#extraTime select, #extraTime input[type="button"], #extraTime label {
+	float: left;
+	margin-top: 5px;
+}
+#extraTime div, #extraTime input[type="button"] {
+	clear: both;
+}
+#extraTime label  {
+	width: 150px;
+	font: 16px "DroidSansRegular", Verdana, sans-serif;
+	color: #717165;
+	margin-top: 5px;
+}
+#extraTime select, #extraTime option {
+	font: normal 16px "DroidSansRegular", Verdana,sans-serif;
+	color: #000000;
+	border: 1px solid hotpink;
+	height: auto;
+	color: #717165;
+	background-color: #FFDDF4;
+}
+#extraTime select {
+	width: 150px;
+}
+#extraTime {
+	width: 320px;
+}
+
+.hoursCell {
+	border: 1px solid #000000;
+}
+/* tab_personalview */
+.personalviewTable {
+    height: 30px;
+    font-size: 15px;
+    width: 50%;
+}
+.personalviewTable h1 {
+    font-size: 20px;
+    color: #e29794;
+}
+.autoField {
+    /*background: blue;_NO__DOTCOMMA__AFTER__*/
+}
+#tooltip {
+	font-size:1em;
+    padding: 5px 10px;
+    background: #cad7e0;
+    border: 1px solid #b2bdc3;
+    opacity: 0.9;
+    width: auto;
+}
+
+.border {
+    border: 2px solid red
+}
+
+/* Color for the highlighting */
+.highlightRow {
+    background-color: #FAC7C2 !important;
+}
+.highlightColumn {
+    background-color: #FAC7C2 !important;
+}
+tr:nth-child(2n+5) .highlightRow, tr:nth-child(2n+5) .highlightColumn {
+	background-color: #EDD3D1 !important;
+}
+.doubleHigh {
+    background-color: #E39795 !important;
+}
+tr:nth-child(2n+5) .doubleHigh {
+	background-color: #E87C83 !important;
+}
+#coursebudgetview .red{
+	background-color: #FF0000 !important;
+}
+
+#coursebudgetview .orange{
+	background-color: #FF7F00 !important;
+}
+
+#coursebudgetview .green{
+	background-color: #00FF00 !important;
+}
+
+#coursebudgetview .highlightRow.orange, #coursebudgetview .highlightColumn.orange {
+	background-color: #FDA361 !important;
+}
+#coursebudgetview .highlightRow.green, #coursebudgetview .highlightColumn.green {
+	background-color: #7DE361 !important;
+}
+#coursebudgetview .highlightRow.red, #coursebudgetview .highlightColumn.red {
+	background-color: #FD6461 !important;
+}
+#coursebudgetview .doubleHigh.orange {
+	background-color: #F18B4B !important;
+}
+#coursebudgetview .doubleHigh.green {
+	background-color: #72CB4B !important;
+}
+#coursebudgetview .doubleHigh.red {
+	background-color: #F14C4B !important;
+}
+
+.maintab {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.noError {
+    color: green;
+    font-size: 18px;
+}
+.error {
+    color: red;
+    font-size: 18px;
+}
+#username {
+	position: absolute;
+    top: 0;
+	right: 0;
+    text-align: right;
+    font-size: 1.3em;
+	font-family: "DroidSansRegular", Verdana,sans-serif;
+    padding: 5px 7px 0 0;
+	z-index: 0;
+}
+.clearfix {
+    /* http: //webstandardstips.com/2010/03/08/the-empty-div-clearfix-anti-pattern/ */
+    clear: both;
+}
+.courseFilterButton {
+    clear: both
+}
+.wrapper {
+    float: left;
+    clear: both;
+}
+
+#coursebudgetviewWrapper {
+	clear: both;
+	font-family: "DroidBoldSans", Verdana,sans-serif;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    border: 5px solid #E9E9E4;
+    background-color: #FAFAF6;
+	float: left;
+}
+#coursebudgetview, #coursebudgetview td {
+    border: 1px solid #FAFAF6;
+	font: 12px "DroidSansRegular", Verdana, sans-serif;
+	margin-bottom: 0;
+}
+#coursebudgetview td.courseHeader, #coursebudgetview #AKMATHeader, #sumHeader, #coursebudgetview .pepHeader {
+	font: 12px "DroidSansBold", Verdana,sans-serif;
+}
+.dispCell, .hoursCell, .sumCell{
+	min-width: 32px;
+	text-align: right;
+}
+.bg {
+	float: left;
+	width: 100%;
+	min-height: 42px;
+	max-height: 120px;
+	min-width: 420px;
+	max-width: 1200px;
+	z-index: -1;
+}
+#bgDiv {
+	overflow: hidden;
+}
+
+/**************** Personal view ***********************************************/
+.personalContentRight {
+	width: 1200px;
+}
+.personalContentLeft {
+	width: 367px;
+	float: left;
+}
+#personalWrapper, #personalCoursesWrapper, #otherTimePersonalWrapper {
+    text-align: right;
+    padding: 10px;
+    margin: 20px 0 15px 15px;
+    border: 5px solid #E9E9E4;
+    background-color: #FAFAF6;
+	float: left;
+}
+#otherTimePersonalWrapper {
+	width: 337px;
+	margin: 0;
+}
+#extraHoursTable tr td:first-child, #extraHoursTable tr td:nth-child(2) {
+	text-align: left;
+}
+#extraHoursTable tr:last-child td:nth-child(2) {
+	text-align: right;
+}
+#personalCoursesWrapper {
+	margin: 0 0 0 15px;
+}
+#personalCoursesWrapper th, #otherTimePersonalWrapper th {
+	text-align: left;
+	font: 12px "DroidSansBold", Verdana, sans-serif;
+}
+#otherTimePersonalWrapper .right {
+	text-align: right;
+	font: 12px "DroidSansBold", Verdana, sans-serif;
+}
+#otherTimePersonalWrapper table tr td:first-child {
+	width: 47px;
+}
+#personalCoursesWrapper table {
+	width: 600px;
+	margin: 0 7px 0 8px;
+	font: 12px "DroidSansRegular", Verdana, sans-serif;
+}
+#otherTimePersonalWrapper table {
+	font: 12px "DroidSansRegular", Verdana, sans-serif;
+	width: 336px;
+}
+
+#personalCoursesWrapper tr:nth-child(odd) td, #personalCoursesWrapper tr:nth-child(odd) th, #otherTimePersonalWrapper tr:nth-child(odd) td, #otherTimePersonalWrapper tr:nth-child(odd) th, .controlPanel tr:nth-child(even) {
+	background-color: #FF69B4;
+}
+#personalCoursesWrapper tr:nth-child(odd), #otherTimePersonalWrapper tr:nth-child(odd) {
+	border: 1px solid #FF69B4;
+}
+#personalCoursesWrapper td:first-child {
+	text-align: left;
+	width: 300px;
+}
+#personalCoursesWrapper td.editableField:last-child {
+	text-align: left;
+}
+#personalCoursesWrapper th.lp {
+	width: 18px;
+	text-align: right;
+}
+#personalCoursesWrapper th.takt {
+	width: 40px;
+	text-align: right;
+}
+#personalCoursesWrapper th.timmar, #otherTimePersonalWrapper th.timmar {
+	width: 50px;
+	text-align: right;
+}
+#personalCoursesWrapper th.percent {
+	width: 40px;
+	text-align: right;
+}
+#personalCoursesWrapper th.notering {
+	text-align: right;
+}
+
+#personalCoursesWrapper tr:nth-child(even) td, #personalCoursesWrapper tr:nth-child(even) th, #otherTimePersonalWrapper tr:nth-child(even) td {
+	background-color: #FAFAF6;
+}
+#personalCoursesWrapper tr:nth-child(even) {
+	border: 1px solid #FAFAF6;
+}
+#personalWrapper h1, #personalCoursesWrapper h1, #otherTimePersonalWrapper h1 {
+	text-align: left;
+	font: normal 24px "MarketingScriptRegular", Georgia, serif;
+	color:#e29794;
+	border-bottom: 1px solid #ECECE9;
+}
+#personalWrapper h2 {
+	text-align: left;
+	font: normal 20px "MarketingScriptRegular", Georgia, serif;
+	color:#e29794;
+	border-bottom: 1px solid #ECECE9;
+}
+.personalTables {
+	float: left;
+}
+.personalTables tr {
+	border: 1px solid #FAFAF6;
+}
+.personalTables td, th {
+	font: 12px "DroidSansRegular", Verdana, sans-serif;
+}
+.personalTables table {
+	float: left;
+	width: 300px;
+	margin-bottom: 0;
+	border-collapse: separate;
+	margin-right: 15px;
+}
+.personalTables table:last-child {
+	margin-right: 0;
+}
+.personalTables .titleCol {
+	width: 85px;
+	text-align: left;
+}
+.personalTables .halfTitleCol {
+	padding: 0;
+	text-align: left;
+}
+.personalTables table tr:nth-child(odd) {
+	background-color: #FF69B4;
+	border: 1px solid #FF69B4;
+}
+.personalTables table tr:nth-child(odd) td, .personalTables table tr:nth-child(odd) th {
+	border: 1px solid #FF69B4;
+}
+.personalTables table tr:nth-child(even) {
+	background-color: #FAFAF6;
+	border: 1px solid #FAFAF6;
+}
+.personalTables table tr:nth-child(even) td, .personalTables table tr:nth-child(even) th {
+	border: 1px solid #FAFAF6;
+}
+.personalTables table tr:nth-child(even) td:first-child, .personalTables table tr:nth-child(even) th:first-child {
+	background-color: #DDDDDD;
+	border: 1px solid #DDDDDD;
+}
+.editableField {
+	background-color: #fac7c3 !important;
+	border: 1px solid #e29794 !important;
+	cursor:text;
+}
+.editableField:hover {
+	background-color: #e29794 !important;
+	border: 1px solid #fac7c3 !important;
+}
+#personNotes {
+	background-color: #000 !important;
+}
+.extraHourButtons {
+	text-align: left;
+}
+/*Ladok************************************************************************/
+#ladokBox {
+	margin-bottom: 5px;
+}
+/******************************************************************************/
+/* MEDIA QUERIES */
+@media screen and (max-width: 500px) {
+	/* *** MENYN *** */
+	nav ul li {
+		padding-left: 10px;
+	}
+	nav ul li a {
+		font-size: 1.2em;
+	}
+	#loginform {
+		width: 260px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	#loginform h1 {
+	font: normal 24px "MarketingScriptRegular", Georgia, serif;
+	color: #717165;
+	margin-left: 10px;
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #ecece9;
+	width: 205px;
+	text-align: left;
+	}
+	#loginform fieldset input[type="text"], #loginform fieldset input[type="password"] {
+		width: 190px; 
+		padding: 8px 8px; 
+		font-size: 10px;
+		color: #89897e; 
+		border: 1px solid #e5e5dd; 
+		background: #f4f4ed; 
+		-webkit-border-radius: 5px; 
+		-moz-border-radius: 5px; 
+		-o-border-radius: 5px; 
+		border-radius: 5px;
+		height: auto;
+	}
+}
+@media screen and (max-width: 320px) {
+	/* *** MENYN *** */
+	nav ul li {
+		padding-left: 5px; 
+	}
+}
+/* HELPBOX */
+#helpbox {
+	display: none;
+	box-shadow: 0 0 10px #777;
+	overflow: auto;
+	overflow-x: hidden;
+	position: fixed;
+	max-height: 500px;
+	width: 500px;
+	background: #F0F0F0;
+	top: 10%;
+	left: 50%;
+	margin-left: -275px;
+	padding: 5px 25px 20px;
+	text-align: left;
+	border: 1px solid #999999;
+}
+#helpbox a{
+	margin-left: 100%;
+}
+#helpboxbutton{
+	text-align: right;
+}
+#helpboxbutton a{
+	color: blue;
+	font-size: 1.5em;
+	text-decoration: none;
+}

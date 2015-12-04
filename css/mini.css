@@ -1,0 +1,41 @@
+/*
+---tab_personalview---
+*/
+
+#courseSumTable{
+	margin-top:20px;
+}
+
+.changeCursor{
+	cursor: hand;
+}
+
+/*
+---manageusers/managecourses---
+*/
+
+.messageBox {
+	padding: 5px;
+	border-width: 1px;
+	border-style: solid;
+	text-align: left;
+	font-weight: bold;
+}
+
+.valid {
+	border-color: green;
+}
+
+.invalid {
+	border-color: red;
+}
+
+#celltip {
+	font-size:1.4em;
+    padding: 5px 10px;
+    background: #cad7e0;
+    border: 1px solid #b2bdc3;
+    opacity: 0.9;
+	max-width: 175px;
+    overflow: hidden;
+}
