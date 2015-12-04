@@ -156,7 +156,7 @@ class DBInterface{
 		$username = sanitizeInput($username, 40);
 
 		// Get user info
-		$query = "SELECT * FROM person WHERE sign=$username";
+		$query = "SELECT * FROM person WHERE sign=$username AND password=password($password)";
 
 		$result = mysql_query($query, $this->dbConn);
 		if(!$result){
@@ -164,7 +164,8 @@ class DBInterface{
 			return false;
 		}
 		$person = mysql_fetch_assoc($result);
-
+		return $person;
+/*
 		if($password && $authKey){
 			// Generate hash of given password and compare to stored password
 			$password = crypt($password, $person['password']);
@@ -187,6 +188,7 @@ class DBInterface{
 		}else{
 			return false;
 		}
+		*/
 	}
 
 	/*
