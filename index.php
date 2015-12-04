@@ -24,7 +24,7 @@
 
 	echo "<script type='text/javascript' language='javascript' src='js/jquery-1.7.2.min.js'></script>";	
 	echo "<script type='text/javascript' language='javascript' src='js/ajaxfunctions.js'></script>";
-	echo "<script src='jquery-ui.min.js'></script>";
+	echo "<script src='js/jquery-ui.min.js'></script>";
 	//to click coursebudgets in the coursebudgetview
 	echo "<script type='text/javascript' language='javascript' src='js/clickScript.js'></script>";
 	echo "<script type='text/javascript' language='javascript' src='js/numeric.js'></script>";
@@ -38,7 +38,7 @@
 		$query = http_build_query($_POST);
 	}*/
 	
-	echo "<link href='jquery-ui.css' rel='stylesheet' type='text/css'/>";
+	echo "<link href='css/jquery-ui.css' rel='stylesheet' type='text/css'/>";
 	echo "<link href='css/normalize.css' rel='stylesheet'/>";
 	echo "<link href='css/stylesheet.css' rel='stylesheet'/>";
 	echo "<link href='css/mini.css' rel='stylesheet' type='text/css'/>"; // MAKE CHANGES TO CSS IN THIS FILE. KTHXBAI.
